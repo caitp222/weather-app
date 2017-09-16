@@ -1,0 +1,30 @@
+<div id="container">
+  <div id="nav-bar-container">
+    <%= erb :'partials/_nav_bar', layout: false %>
+  </div>
+
+  <div id="content-container">
+    <div class="current-location-weather-container">
+      <div class="current-location-weather-content-container">
+        <h1>Welcome to the Weather</h1>
+        <p>The weather in <%=@current_location.name%> is described as <%=weather_description(@current_location.open_weather_code)%>.</p>
+        <p>The max temp is <%=max_temperature(@current_location.open_weather_code)%>°C</p>
+        <p>The min temp is <%=min_temperature(@current_location.open_weather_code)%>°C</p>
+        <div><img id="main" src="<%=get_gif(giphy_weather_description(@current_location.open_weather_code))%>"></div>
+      </div>
+    </div>
+
+    <div class="favorite-places-form-container">
+      <% @places.each do |place| %>
+        <form class="pick-favorite-form" method="post" action="/">
+          <input type="hidden" name="place" value="<%=place.name%>">
+          <input type="submit" value="<%=place.name%>">
+        </form>
+      <% end %>
+    </div>
+
+    <div class="favorite-places-weather-container">
+      <%= erb :'partials/_favorites', layout: false %>
+    </div>
+  </div>
+</div>
