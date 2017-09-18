@@ -1,6 +1,6 @@
 helpers do
 
-  WEATHER_BASE_URL = "http://api.openweathermap.org/data/2.5/weather?id="
+  WEATHER_BASE_URL = "http://api.openweathermap.org/data/2.5/weather?q="
 
   def get_weather(city)
     json_string_response = open(WEATHER_BASE_URL + city + "&APPID=" + ENV["OPEN_WEATHER_API_KEY"]).read
