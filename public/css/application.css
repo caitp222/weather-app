@@ -1,4 +1,15 @@
 body {
+ background-color:#a1a1ca;
+}
+
+div {
+  /*border:1px solid black;*/
+  text-align: center;
+  vertical-align: center;
+  background-color: #dbdbf3;
+}
+
+/*body {
   background-image: url("https://c2.staticflickr.com/2/1709/24780233325_3f08f6b76e_b.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -136,3 +147,4 @@ div#content-container h1 {
 div.current-location-weather-content-container p {
   font-size: 25px;
 }
+*/
