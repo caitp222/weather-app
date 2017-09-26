@@ -14,7 +14,12 @@
     <div class="col-6">
       <div class="row">
         <form id="pick-city-form" method="post" action="/cities">
-          <input class="form-control" type="text" name="city" placeholder="City Name">
+          <input class="form-control" list="cities" type="text" name="city" placeholder="City Name">
+            <datalist id="cities">
+              <% @places.each do |place| %>
+                <option value="<%=place.name%>"></option>
+              <% end %>
+            </datalist>
           <input class="form-control" type="submit" value="Get Weather">
         </form>
       </div>
