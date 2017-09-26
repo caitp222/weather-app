@@ -22,6 +22,7 @@ require 'erb'
 require 'open-uri'
 require 'json'
 require 'nokogiri'
+require 'open-uri'
 
 configure :development, :test do
   require 'dotenv/load'

@@ -5,7 +5,7 @@
 
   <div class="row">
     <div class="col-6">
-      <p>The weather in <%=@current_location%> is described as <%=weather_description(@current_location)%>.</p>
+      <p>You are in <%=@current_location%>, where the weather is described as <%=weather_description(@current_location)%>.</p>
       <p>The max temp is <%=max_temperature(@current_location)%>°C</p>
       <p>The min temp is <%=min_temperature(@current_location)%>°C</p>
       <img id="main" src="<%=get_gif(giphy_weather_description(@current_location))%>">
@@ -13,7 +13,8 @@
 
     <div class="col-6">
       <div class="row">
-        <form id="pick-city-form" method="post" action="/cities">
+        <form id="pick-city-form" method="post" action="/cities" class="col-12">
+          <p>Wondering what the weather's like elsewhere?</p>
           <input class="form-control" list="cities" type="text" name="city" placeholder="City Name">
             <datalist id="cities">
               <% @places.each do |place| %>
@@ -25,7 +26,7 @@
       </div>
 
       <div class="row">
-        <div id="requested-city-info" class="col-6">
+        <div id="requested-city-info" class="col-12">
           <%= erb :'partials/_city_details', layout: false %>
         </div>
       </div>

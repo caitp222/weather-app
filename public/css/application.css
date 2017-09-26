@@ -1,12 +1,18 @@
-body {
- background-color:#a1a1ca;
+html body {
+ background-color: #dbdbf3;
+ text-align:center;
+ margin:0;
+ padding:0;
 }
 
 div {
   /*border:1px solid black;*/
   text-align: center;
   vertical-align: center;
-  background-color: #dbdbf3;
+}
+
+input {
+  text-align: center;
 }
 
 /*body {
