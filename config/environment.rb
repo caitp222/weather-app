@@ -21,6 +21,7 @@ require "sinatra/reloader" if development?
 require 'erb'
 require 'open-uri'
 require 'json'
+require 'nokogiri'
 
 configure :development, :test do
   require 'dotenv/load'

@@ -1,18 +1,13 @@
-User.delete_all
-Place.delete_all
-Favorite.delete_all
+require 'open-uri'
 
-Place.create(name: "London", open_weather_code: "2643743")
-Place.create(name: "New York", open_weather_code: "5128638")
-Place.create(name: "Paris", open_weather_code: "6455259")
-Place.create(name: "Milton Keynes", open_weather_code: "3333173")
-Place.create(name: "Pyongyang", open_weather_code: "1871859")
-Place.create(name: "Quito", open_weather_code: "3652462")
-Place.create(name: "Boynton Beach", open_weather_code: "3652462")
+doc = Nokogiri::HTML(open("https://en.wikipedia.org/wiki/List_of_largest_cities"))
 
+doc.css('th a')[4].attributes["title"].value
+doc.css('th a')[242].attributes["title"].value
 
-User.create(first_name: "Caitlin", last_name: "Prentke")
-User.create(first_name: "Le-Keisha", last_name: "Towner")
-User.create(first_name: "Simon", last_name: "Brady")
-User.create(first_name: "Sam", last_name: "Bok")
-User.create(first_name: "Sarah", last_name: "Schaab")
+i = 4
+
+until i == 242
+  Place.create(name: doc.css('th a')[i].attributes["title"].value)
+  i += 1
+end

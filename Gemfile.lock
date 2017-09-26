@@ -91,6 +91,7 @@ DEPENDENCIES
   dotenv
   factory_girl
   faker
+  nokogiri
   pg
   rack-test
   rake
