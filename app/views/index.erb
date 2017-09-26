@@ -30,26 +30,9 @@
       <img id="main" src="<%=get_gif(giphy_weather_description(@current_location))%>">
     </div>
 
-<% if false %>
-    <div class="col-6">
-      <div class="row">
-        <form id="pick-city-form" method="post" action="/cities" class="col-12">
-          <p>Wondering what the weather's like elsewhere?</p>
-          <input class="form-control" list="cities" type="text" name="city" placeholder="City Name">
-            <datalist id="cities">
-              <% @places.each do |place| %>
-                <option value="<%=place.name%>"></option>
-              <% end %>
-            </datalist>
-          <input class="form-control" type="submit" value="Compare Weather">
-        </form>
-      </div>
-<% end %>
-
-      <div class="row">
-        <div id="requested-city-info" class="col-12">
-          <%= erb :'partials/_city_details', layout: false %>
-        </div>
+    <div class="row">
+      <div id="requested-city-info" class="col-12">
+        <%= erb :'partials/_city_details', layout: false %>
       </div>
     </div>
   </div>
