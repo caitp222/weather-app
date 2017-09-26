@@ -1,0 +1,6 @@
+<% if @city %>
+  <p>The weather in <%=@city%> is described as <%=weather_description(@city)%>.</p>
+  <p>The max temp is <%=max_temperature(@city)%>°C</p>
+  <p>The min temp is <%=min_temperature(@city)%>°C</p>
+  <img src="<%=get_gif(giphy_weather_description(@city))%>">
+<% end %>

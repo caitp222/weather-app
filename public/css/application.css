@@ -1,0 +1,156 @@
+html body {
+ background-color: #dbdbf3;
+ text-align:center;
+ margin:0;
+ padding:0;
+}
+
+div {
+  /*border:1px solid black;*/
+  text-align: center;
+  vertical-align: center;
+}
+
+input {
+  text-align: center;
+}
+
+/*body {
+  background-image: url("https://c2.staticflickr.com/2/1709/24780233325_3f08f6b76e_b.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Arial";
+}
+
+div#content-container {
+  padding-top: 20px;
+}
+
+nav {
+  background-color: purple;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: purple;
+  height: 50px;
+  color: white;
+  font-size:30px;
+}
+
+nav > form {
+  display: inline-block;
+}
+
+nav > form > input {
+  background: none;
+  border: none;
+}
+
+nav > a {
+  display: inline-block;
+  color:white;
+}
+
+div#content-container div {
+  display: inline-block;
+  vertical-align: top;
+}
+
+div#content-container div.current-location-weather-container {
+  width: 42%;
+}
+
+div#content-container div.current-location-weather-container div.current-location-weather-content-container {
+  width: 100%;
+  text-align:center;
+}
+
+div#content-container div.favorite-places-form-container {
+  width: 14%;
+  text-align:center;
+}
+
+div#content-container div.favorite-places-weather-container {
+  width: 42%;
+  text-align:center;
+}
+
+article {
+  display:inline-block;
+  margin-bottom:2%;
+  margin-right:2%;
+  max-width:44%;
+  min-width: 44%;
+  max-height: 45%;
+  min-height: 50px;
+  border-color:black;
+  border-style: groove;
+  border-width: medium;
+  padding-bottom:10%;
+  background-color: rgba(23, 132, 174, 0.3);
+  background: rgba(23, 132, 174, 0.3);
+  background-color: rgba(23, 132, 174, 0.3);
+  opacity: 80%;
+  float: left;
+  font-style:white;
+}
+
+article div.giphy-container {
+  vertical-align: center;
+  width: 80%;
+}
+
+img {
+  height:200px;
+  vertical-align: center;
+}
+
+img#main {
+  height: 400px;
+  vertical-align:center;
+}
+
+div#content-container div.favorite-places-form-container input {
+  background-color:blue;
+  border-radius:50%;
+  width:120px;
+  height:120px;
+  border:none;
+  font-size:1em;
+  color:black;
+  background: -moz-radial-gradient(center, ellipse cover, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 56%);
+  background: -webkit-radial-gradient(center, ellipse cover, #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 56%);
+  background: radial-gradient(ellipse at center, #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 56%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=1 );
+}
+
+form.remove-favorite-form input {
+  background-color:blue;
+  border-radius:50%;
+  width:100px;
+  height:40px;
+  border:none;
+  font-size:1em;
+  color:white;
+  border-color: white;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  text-align: left;
+}
+
+div#content-container h1 {
+  font-size:60px;
+  font-style:bold;
+  text-align:center;
+}
+
+div.current-location-weather-content-container p {
+  font-size: 25px;
+}
+*/
