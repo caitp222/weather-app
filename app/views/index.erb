@@ -4,21 +4,26 @@
   </div>
 
   <div class="row">
-    <div class="col-4">
+    <div class="col-6">
       <p>The weather in <%=@current_location%> is described as <%=weather_description(@current_location)%>.</p>
       <p>The max temp is <%=max_temperature(@current_location)%>°C</p>
       <p>The min temp is <%=min_temperature(@current_location)%>°C</p>
       <img id="main" src="<%=get_gif(giphy_weather_description(@current_location))%>">
     </div>
 
-    <div class="col-4">
-      <form id="pick-city-form" method="post" action="/cities">
-        <input class="form-control" type="text" name="city" placeholder="City Name">
-        <input class="form-control" type="submit" value="Get Weather">
-      </form>
-    </div>
-    <div id="requested-city-info" class="col-4">
-      <%= erb :'partials/_city_details', layout: false %>
+    <div class="col-6">
+      <div class="row">
+        <form id="pick-city-form" method="post" action="/cities">
+          <input class="form-control" type="text" name="city" placeholder="City Name">
+          <input class="form-control" type="submit" value="Get Weather">
+        </form>
+      </div>
+
+      <div class="row">
+        <div id="requested-city-info" class="col-6">
+          <%= erb :'partials/_city_details', layout: false %>
+        </div>
+      </div>
     </div>
   </div>
 </div>
