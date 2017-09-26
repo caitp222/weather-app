@@ -7,7 +7,7 @@
     <div class="col"
     </div>
     <div class="col">
-      <form id="pick-city-form" method="post" action="/cities" class="col-12">
+      <form id="pick-city-form" method="post" action="/cities">
         <p>Ready to torture yourself with far-away weather and semi-relevant gifs?</p>
         <input class="form-control" list="cities" type="text" name="city" placeholder="City Name">
           <datalist id="cities">
@@ -15,7 +15,7 @@
               <option value="<%=place.name%>"></option>
             <% end %>
           </datalist>
-        <input class="form-control" type="submit" value="Get Weather">
+        <input class="form-control" type="submit" value="Compare Weather">
       </form><br><br><br>
     </div>
     <div class="col"
@@ -29,8 +29,8 @@
       <p>The min temp is <%=min_temperature(@current_location)%>°C</p>
       <img id="main" src="<%=get_gif(giphy_weather_description(@current_location))%>">
     </div>
-    <% if false %>
 
+<% if false %>
     <div class="col-6">
       <div class="row">
         <form id="pick-city-form" method="post" action="/cities" class="col-12">
@@ -44,8 +44,7 @@
           <input class="form-control" type="submit" value="Compare Weather">
         </form>
       </div>
-
-      <% end %>
+<% end %>
 
       <div class="row">
         <div id="requested-city-info" class="col-12">
