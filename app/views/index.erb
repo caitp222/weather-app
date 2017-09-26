@@ -1,6 +1,6 @@
 <div class="container">
   <div class="container-fluid">
-    <h1>Welcome to the Weather</h1>
+    <h1>Welcome to the Weather</h1><br>
   </div>
 
   <div class="row">
@@ -13,36 +13,12 @@
 
     <div class="col-4">
       <form id="pick-city-form" method="post" action="/cities">
-        <input type="text" name="city" placeholder="City Name">
-        <input type="submit" value="Get Weather">
+        <input class="form-control" type="text" name="city" placeholder="City Name">
+        <input class="form-control" type="submit" value="Get Weather">
       </form>
     </div>
     <div id="requested-city-info" class="col-4">
       <%= erb :'partials/_city_details', layout: false %>
     </div>
-
-
-
-
-
-
-    <%if false%>
-
-    <div class="col">
-      <% @places.each do |place| %>
-        <div class="col-1"
-          <form class="pick-favorite-form" method="post" action="/">
-            <input type="hidden" name="place" value="<%=place.name%>">
-            <input type="submit" value="<%=place.name%>">
-          </form>
-        </div>
-      <% end %>
-    </div>
-
-    <div class="col">
-      <%= erb :'partials/_favorites', layout: false %>
-    </div>
-    <%end%>
-
   </div>
 </div>
